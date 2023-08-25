@@ -4,6 +4,7 @@ from psycopg2 import sql
 
 app = Flask(__name__)
 
+
 def save_code_to_db(code, table_name, column_name):
     conn = psycopg2.connect(database="travelbox_db",
                             user="doadmin",
