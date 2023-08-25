@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="manual">
+    1) შედით საიტზე <a href="https://www.myauto.ge/>" target="_blank"> www.myauto.ge </a> <br>
+    2) გაფილტრეთ თქვენთვის სასურველი მონაცემებით <br>
+    3) დააკოპირეთ ლინკი ბრაუზერიდან და გადმოიტანეთ ამ საიტზე <br>
+    4) მიუთითეთ მობილურის ნომერი <br>
+    5) მიუთითეთ დრო, თუ რამდენი ხნის განმავლობაში გინდათ კონკრეტული ლინკის შემოწმება <br>
+
+    <form id="form" action="{{ url_for('submit') }}" method="POST" onsubmit="return validateForm()">
+        <div class="animation">
+            {% include 'animation.html' %}
+        </div>
+        <div class="input-box">
+            <label class="input-label">საძიებოს ლინკი </label>
+            <input type="text" class="input-1" id="link" name="link" onfocus="setFocus(true)" onblur="setFocus(false)"/>
+        </div>
+        <div class="input-box active-grey">
+            <label class="input-label">დღეების რაოდენობა</label>
+            <select class="input-1" id="expiration_day" name="expiration_day" onfocus="setFocus(true)"
+                    onblur="setFocus(false)">
+                <option value="1">1</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="input-box" id="mobile-1">
+            <label class="input-label">მობ. ნომერი</label>
+            <input type="text" class="input-1" id="phone" name="phone" oninput="validatePhone()"
+                   onfocus="setFocus(true)" onblur="setFocus(false)"/>
+        </div>
+        <button type="button" id="send-sms-code" class="send-sms-code-button" onclick="sendSmsCode()" disabled>send
+        </button>
+
+        <div class="input-box" id="mobile-2">
+            <label class="input-label">კოდი</label>
+            <input type="text" class="input-1" id="sms_code" name="sms_code" onfocus="setFocus(true)"
+                   onblur="setFocus(false)"/>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary pull-right">შენახვა</button>
+
+        <div class="clear"></div>
+    </form>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</html>

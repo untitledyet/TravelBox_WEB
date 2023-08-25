@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+/* Buttons */
+body {
+    font-family: "open sans", roboto, arial, sans-seif;
+    background: #fff;
+}
+
+.animation {
+    height: 50%;
+    width: 50%;
+}
+
+#mobile-1, #mobile-2, #send-sms-code {
+    display: inline-block;
+}
+
+#mobile-1 {
+    width: 50%;
+}
+
+.send-sms-code-button {
+    background-color: #007bff;
+    color: #fff;
+    border: 5px;
+    cursor: pointer;
+    width: 15%;
+    border-radius: 5px;
+    left: 10px;
+}
+
+#mobile-2 {
+    width: 30%;
+    float: right;
+}
+
+
+input {
+    background: #fff;
+}
+
+#form {
+    width: 100%;
+    margin: 0 auto;
+'' 'margin-top: 50px;' '' float: right;
+    display: inline-block;
+}
+
+.input-box.active-grey .input-1 {
+    border: 1px solid #dadce0;
+}
+
+.input-box.active-grey .input-label {
+    color: #80868b;
+    top: -8px;
+    background: #fff;
+    font-size: 11px;
+    transition: 250ms;
+}
+
+.input-box.active-grey .input-label svg {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    top: 2px;
+    transition: 250ms;
+}
+
+.input-box {
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-box .input-label {
+    position: absolute;
+    color: #80868b;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: calc(100% - (2 * 8px));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    left: 8px;
+    top: 13px;
+    padding: 0 8px;
+    transition: 250ms;
+    user-select: none;
+    pointer-events: none;
+}
+
+.input-box .input-label svg {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    transition: 250ms;
+}
+
+.input-box .input-1 {
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    color: #202124;
+    border: 1px solid #dadce0;
+    padding: 13px 15px;
+    transition: 250ms;
+}
+
+.input-box .input-1:focus {
+    outline: none;
+    border: 2px solid #1a73e8;
+    transition: 250ms;
+}
+
+.input-box.error .input-label {
+    color: #f44336;
+    top: -8px;
+    background: #fff;
+    font-size: 11px;
+    transition: 250ms;
+}
+
+.input-box.error .input-1 {
+    border: 2px solid #f44336;
+}
+
+.input-box.focus .input-label, .input-box.active .input-label {
+    color: #1a73e8;
+    top: -8px;
+    background: #fff;
+    font-size: 11px;
+    transition: 250ms;
+}
+
+.input-box.focus .input-label svg, .input-box.active .input-label svg {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    top: 2px;
+    transition: 250ms;
+}
+
+.input-box.active .input-1 {
+    border: 2px solid #1a73e8;
+}
+
+.btn {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    white-space: normal;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    line-height: 20px;
+    min-width: 88px;
+    transition: 250ms;
+}
+
+.btn:hover {
+    background: #ddd;
+    transition: 250ms;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-primary {
+    background: #1a73e8;
+    color: #fff;
+    transition: 250ms;
+}
+
+.btn-primary:hover {
+    background: #287ae6;
+    box-shadow: 0 1px 1px 0 rgba(66, 133, 244, 0.45), 0 1px 3px 1px rgba(66, 133, 244, 0.3);
+    transition: 250ms;
+}
+
+/*.pull-right {
+    float: right;
+} */
+
+.clear {
+    clear: both;
+}
+
+
+.manual {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.manual a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.manual a:hover {
+    color: #0056b3;
+}
+
+.manual br {
+    display: block;
+    content: "";
+    margin-top: 10px;
+}
+
+.manual h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .manual {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+.send-sms-code-button {
+    /* Common styles for the send button */
+    /* Add your desired styles here */
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.send-sms-code-button[disabled] {
+    /* Styles for the disabled send button */
+    /* Add your desired styles here */
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.send-sms-code-button:not([disabled]) {
+    /* Styles for the enabled send button */
+    /* Add your desired styles here */
+    /* For example, you can change the background color to indicate it's enabled */
+    background-color: #28a745;
+}
